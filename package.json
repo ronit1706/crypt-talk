@@ -1,5 +1,5 @@
 {
-  "name": "codedex-chat-app",
+  "name": "anonymous-chat-app",
   "version": "1.0.0",
   "description": "This repository contains the chat application developed as part of the in-house project tutorial.",
   "main": "index.js",
@@ -8,17 +8,11 @@
     "serve": "nodemon backend/server-starter.js",
     "completed": "node backend/server-completed.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Goku-kun/codedex-chat-app.git"
-  },
+
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Goku-kun/codedex-chat-app/issues"
-  },
-  "homepage": "https://github.com/Goku-kun/codedex-chat-app#readme",
+
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.2",
