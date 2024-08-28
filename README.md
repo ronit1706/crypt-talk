@@ -1,4 +1,4 @@
-# Anonymous Chat App
+# CryptTalk - A Real-time Anonymous chat app
 A feature-rich real-time chat application built using modern web technologies. This application allows users to join different chat rooms, exchange messages in real time, and experience a responsive and intuitive UI.
 
 ## Features:
