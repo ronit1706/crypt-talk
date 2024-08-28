@@ -1,0 +1,218 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Light gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .chat-container {
+    display: flex;
+    width: 1200px; /* Increased width to accommodate room controls */
+    height: 80vh; /* Fixed height relative to viewport height */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    position: relative;
+  }
+  
+  .room-controls {
+    width: 300px; /* Fixed width for room controls */
+    border-right: 1px solid #ccc;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Adjusts columns */
+    gap: 10px; /* Adds space between grid items */
+  }
+  
+  .room-controls h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+  
+  .room-controls .no-rooms-message {
+    color: #888; /* Subtle grey color for no rooms message */
+    text-align: center;
+    margin: 10px 0;
+  }
+  
+  .room-controls ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .room-controls li {
+    margin-bottom: 10px;
+  }
+  
+  .room-controls button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .room-controls button:hover {
+    background-color: #0056b3;
+  }
+  
+  .room-controls form {
+    margin-top: 20px;
+  }
+  
+  .room-controls form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: calc(100% - 90px); /* Adjust width to fit within container */
+  }
+  
+  .room-controls form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .room-controls form button:hover {
+    background-color: #0056b3;
+  }
+  
+  .chat-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-area h2 {
+    background-color: #333;
+    color: #fff;
+    padding: 16px;
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  
+  .chat-window {
+    flex: 1;
+    padding: 16px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-window.no-room {
+    background-color: #e0e0e0; /* Grey background when no room is selected */
+  }
+  
+  .chat-message {
+    margin-bottom: 12px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    max-width: 100%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+  }
+  
+  .chat-message.own-message {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-end;
+    text-align: right;
+  }
+  
+  .chat-message.other-message {
+    background-color: #e9ecef;
+    color: #333;
+    align-self: flex-start;
+    text-align: left;
+  }
+  
+  .chat-message strong {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  form {
+    display: flex;
+    padding: 12px;
+    border-top: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+  input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .toggle-rooms-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .toggle-rooms-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .username-bar {
+    padding: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  }
+  
+  .username-bar.hidden {
+    display: none;
+  }
+  
+  .username-bar p {
+    margin: 0;
+    padding-left: 16px; /* Added padding to the left of the username */
+    font-size: 16px;
+    color: #333;
+  }
